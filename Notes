@@ -1,0 +1,69 @@
+============
+GitHub repo
+============
+
+https://github.com/vinsguru/redis-webflux
+
+==================
+Redis crash course
+==================
+Use cases:
+
+ - Caching
+ - Pub/Sub
+ - Message queue
+ - Streaming
+ - Geospatial
+
+
+=============
+Docker setup
+=============
+
+docker-compose.yml
+
+
+version: '3'
+services:
+  redis:
+    container_name: redis
+    hostname: redis
+    image: redis:6.2
+    ports:
+      - 6379:6379
+
+
+docker-compose up
+
+docker exec -it redis bash
+
+redis-cli
+
+ ========
+ Redisson
+ ========
+ 3 Redis Java libraries are present.
+
+ Jedis
+  -Fast
+  -Not thread safe
+ Lettuce
+  -Scalable and supports reactive streams.
+  -Works with Spring Data Redis
+  -Low level API compared to Redisson
+ Redisson
+  -Scalable and supports reactive streams.
+  -Works with Spring Data Redis.
+
+  ===================
+  Maven dependencies
+  ===================
+
+  https://github.com/vinsguru/redis-webflux/blob/master/redisson-playground/pom.xml
+
+  ===============
+  redisson wiki
+  ===============
+  https://github.com/redisson/redisson/wiki
+
+  https://github.com/redisson/redisson/wiki/4.-data-serialization
